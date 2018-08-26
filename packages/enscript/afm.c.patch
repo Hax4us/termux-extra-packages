@@ -1,0 +1,11 @@
+--- /data/data/com.termux/files/home/afm.c	2018-08-26 17:09:29.103000011 +0530
++++ afmlib/afm.c	2018-08-26 17:11:32.170000006 +0530
+@@ -27,7 +27,7 @@
+  * Static variables
+  */
+ 
+-static char *default_path = "/usr/local/lib/ps:/usr/lib/ps";
++static char *default_path = "@TERMUX_PREFIX@/usr/lib/ps";
+ 
+ static char *error_names[] =
+ {

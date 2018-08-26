@@ -1,4 +1,4 @@
-TERMUX_PKG_HOMEPAGE=http://git.savannah.gnu.org/cgit/enscript.git
+TERMUX_PKG_HOMEPAGE=http://git.savannah.gnu.org/cgit/ensript.git
 TERMUX_PKG_DESCRIPTION="Enscript converts ASCII text files to PostScript, HTML, RTF, ANSI and overstrikes."
 TERMUX_PKG_VERSION=1.6.6
 TERMUX_PKG_MAINTAINER="lokesh @hax4us"

@@ -2,7 +2,7 @@
 set -o nounset
 
 ## Change this if you want to build packages to different architecture.
-TARGET_ARCHITECTURE="aarch64"
+TARGET_ARCHITECTURE="arm"
 
 ##############################################################################
 

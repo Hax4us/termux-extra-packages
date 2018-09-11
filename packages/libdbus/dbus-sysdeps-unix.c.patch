@@ -1,0 +1,11 @@
+--- dbus-1.12.10/dbus/dbus-sysdeps-unix.c	2018-09-11 19:13:16.139000000 +0530
++++ dbus-sysdeps-unix.c	2018-09-11 18:59:57.017000004 +0530
+@@ -3602,7 +3602,7 @@
+ 
+       /* And this is the sane fallback. */
+       if (tmpdir == NULL)
+-        tmpdir = "/tmp";
++        tmpdir = "@TERMUX_PREFIX@/tmp";
+     }
+ 
+   _DBUS_UNLOCK (sysdeps);

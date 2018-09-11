@@ -1,0 +1,16 @@
+--- dbus-1.12.10/dbus/dbus-address.c	2018-09-11 19:13:37.199000001 +0530
++++ dbus-address.c	2018-09-11 19:01:32.857000009 +0530
+@@ -764,11 +764,11 @@
+       ++i;
+     }
+   
+-  if (!dbus_parse_address ("unix:path=/tmp/foo;debug:name=test,sliff=sloff;",
++  if (!dbus_parse_address ("unix:path=@TERMUX_PREFIX@/tmp/foo;debug:name=test,sliff=sloff;",
+ 			   &entries, &len, &error))
+     _dbus_assert_not_reached ("could not parse address");
+   _dbus_assert (len == 2);
+-  _dbus_assert (strcmp (dbus_address_entry_get_value (entries[0], "path"), "/tmp/foo") == 0);
++  _dbus_assert (strcmp (dbus_address_entry_get_value (entries[0], "path"), "@TERMUX_PREFIX@/tmp/foo") == 0);
+   _dbus_assert (strcmp (dbus_address_entry_get_value (entries[1], "name"), "test") == 0);
+   _dbus_assert (strcmp (dbus_address_entry_get_value (entries[1], "sliff"), "sloff") == 0);
+   

@@ -1,0 +1,24 @@
+--- dbus-1.12.10/dbus/dbus-sysdeps-util-unix.c	2018-09-11 18:54:37.050830479 +0530
++++ dbus-sysdeps-util-unix.c	2018-09-11 18:51:26.960830468 +0530
+@@ -1412,7 +1412,7 @@
+     }
+   else
+     {
+-      if (!_dbus_string_append (&servicedir_path, "/usr/local/share:/usr/share:"))
++      if (!_dbus_string_append (&servicedir_path, "@TERMUX_PREFIX@/share:"))
+         goto oom;
+     }
+ 
+@@ -1470,10 +1470,9 @@
+    * be available.
+    */
+   static const char standard_search_path[] =
+-    "/usr/local/share:"
+-    "/usr/share:"
++    "@TERMUX_PREFIX@/share:"
+     DBUS_DATADIR ":"
+-    "/lib";
++    "@TERMUX_PREFIX@/lib";
+   DBusString servicedir_path;
+ 
+   _dbus_string_init_const (&servicedir_path, standard_search_path);

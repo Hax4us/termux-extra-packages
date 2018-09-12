@@ -1,0 +1,11 @@
+--- dbus-glib-0.110/Makefile.in	2018-01-29 18:12:36.000000000 +0530
++++ Makefile.in	2018-09-12 17:39:29.230000107 +0530
+@@ -407,7 +407,7 @@
+ top_srcdir = @top_srcdir@
+ ACLOCAL_AMFLAGS = -I m4
+ GLIB_PC = dbus-glib-1.pc
+-SUBDIRS = dbus-gmain dbus tools test doc
++SUBDIRS = dbus-gmain dbus
+ DIST_SUBDIRS = dbus-gmain dbus tools test doc m4
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = $(GLIB_PC)

@@ -1,0 +1,11 @@
+--- dbus-glib-0.110/dbus/Makefile.in	2018-01-29 18:12:37.000000000 +0530
++++ Makefile.in	2018-09-12 17:43:23.350000121 +0530
+@@ -613,7 +613,7 @@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = . examples
++SUBDIRS = 
+ AM_CPPFLAGS = \
+ 	-I$(top_srcdir)						\
+ 	-I$(top_builddir)					\

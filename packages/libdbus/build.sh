@@ -2,7 +2,7 @@ TERMUX_PKG_HOMEPAGE=https://www.freedesktop.org/wiki/Software/dbus
 TERMUX_PKG_VERSION=1.12.10
 TERMUX_PKG_SRCURL=https://dbus.freedesktop.org/releases/dbus/dbus-$TERMUX_PKG_VERSION.tar.gz
 TERMUX_PKG_SHA256=4b693d24976258c3f2fa9cc33ad9288c5fbfa7a16481dbd9a8a429f7aa8cdcf7
-TERMUX_PKG_DEPENDS="libexpat"
+TERMUX_PKG_DEPENDS="libexpat,libx11"
 TERMUX_PKG_EXTRA_CONFIGURE_ARGS="
 --enable-x11-autolaunch
 --with-system-pid-file=$TERMUX_PREFIX/var/run/dbus/pid

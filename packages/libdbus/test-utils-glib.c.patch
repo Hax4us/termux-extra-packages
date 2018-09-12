@@ -1,0 +1,10 @@
+--- /data/data/com.termux/files/home/dbus-1.12.10/test/test-utils-glib.c	2018-09-12 15:14:18.205000047 +0530
++++ test-utils-glib.c	2018-09-12 15:14:08.535000047 +0530
+@@ -37,6 +37,7 @@
+ # include <netdb.h>
+ # include <signal.h>
+ # include <unistd.h>
++# include <netinet/in.h>
+ # include <sys/socket.h>
+ # include <sys/types.h>
+ # include <pwd.h>

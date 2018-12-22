@@ -2,7 +2,7 @@
 set -o nounset
 
 ## Change this if you want to build packages to different architecture.
-TARGET_ARCHITECTURE="aarch64"
+TARGET_ARCHITECTURE="arm"
 
 ##############################################################################
 
@@ -95,7 +95,7 @@ else
 fi
 
 echo -n "[*] Uploading archive... "
-if RESULT_URL=$(curl --silent --upload-file "${PACKAGES_ARCHIVE_FILE}" https://transfer.sh/) > /dev/null 2>&1; then
+if RESULT_URL=$(curl --silent -F "file=@${PACKAGES_ARCHIVE_FILE}" https://file.io/) > /dev/null 2>&1; then
     echo "ok"
     echo
     echo "Your packages were uploaded to: ${RESULT_URL}"
